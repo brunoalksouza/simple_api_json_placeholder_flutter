@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_api_json_placeholder_flutter/pages/home_page.dart';
 import 'package:simple_api_json_placeholder_flutter/pages/login_page.dart';
 import 'package:simple_api_json_placeholder_flutter/pages/splash_page.dart';
 
@@ -17,7 +18,8 @@ class MainApp extends StatelessWidget {
       initialRoute: '/spash',
       routes: {
         '/spash': (_) => const SpashPage(),
-        '/login': (_) => const LoginPage(),
+        '/login': (_) => LoginPage(),
+        '/home': (_) => const HomePage(),
       },
     );
   }

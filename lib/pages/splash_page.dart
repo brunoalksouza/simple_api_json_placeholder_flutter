@@ -19,7 +19,7 @@ class _SpashPageState extends State<SpashPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: Colors.purple[800],
       child: const Center(
           child: CircularProgressIndicator(
         color: Colors.white54,
