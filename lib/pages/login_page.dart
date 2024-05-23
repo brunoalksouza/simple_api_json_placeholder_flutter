@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_api_json_placeholder_flutter/controllers/login_controller.dart';
+import 'package:simple_api_json_placeholder_flutter/widgets/custom_text_field.dart';
 
 class LoginPage extends StatelessWidget {
   final LoginController _controller = LoginController();
@@ -22,20 +23,14 @@ class LoginPage extends StatelessWidget {
               Icons.people,
               size: MediaQuery.of(context).size.width * 0.28,
             ),
-            TextField(
-              decoration: const InputDecoration(
-                hintText: 'Login',
-              ),
-              onChanged: _controller.setLogin,
-            ),
-            TextField(
-              obscureText: true,
-              decoration: const InputDecoration(
-                hintText: 'Senha',
-              ),
-              onChanged: _controller.setPassword,
-            ),
+            CustomTextFieldWidget(
+                onChanged: _controller.setLogin, label: 'Login'),
             const SizedBox(height: 30),
+            CustomTextFieldWidget(
+              onChanged: _controller.setPassword,
+              label: 'Senha',
+              obscureText: true,
+            ),
             ElevatedButton(
               onPressed: () {
                 _controller.auth().then(
